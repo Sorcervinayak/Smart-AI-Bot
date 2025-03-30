@@ -1,0 +1,255 @@
+.home{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+nav{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: white;
+  padding: 10px 30px;
+  font-size: 30px;
+}
+/* Logo text */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-right: 15px; /* Space between text and image */
+  cursor: pointer;
+}
+
+/* Logo image */
+nav img {
+  width: 50px;
+  height: auto;
+  border-radius: 5px;
+  object-fit: contain;
+}
+
+.hero {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#tag {
+  font-size: 2.5vmax;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+.category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.upImage, .genImage, .chat {
+  width: 230px;
+  padding: 15px 25px;
+  border: 2px solid white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;  /* Change to row to align items horizontally */
+  align-items: center;
+  justify-content: center;
+  gap: 10px;  /* Adjust spacing between icon and text */
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  min-width: 150px; /* Prevents elements from becoming too small */
+}
+
+.upImage:hover, .genImage:hover, .chat:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.icon {
+  font-size: 24px;  /* Adjust size */
+  color: white;
+}
+
+span {
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+}
+
+.upImage svg{
+  width: 25px;
+  height: 25px;
+  color: rgb(7, 240, 11);
+}
+
+.genImage svg{
+  width: 25px;
+  height: 25px;
+  color: rgb(7, 236, 240);
+}
+
+.chat svg{
+  width: 25px;
+  height: 25px;
+  color: orange;
+}
+
+.input-box {
+  width: 100%;
+  height: calc(100vh - 80px - 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  position: fixed;
+  bottom: 0;
+}
+
+.input-box input {
+  width: 50%;  /* Adjust width */
+  min-width: 200px;
+  padding: 10px 15px;
+  border: 1px solid white;
+  border-radius: 20px;
+  font-size: 16px;
+  color: white;
+  background: transparent;
+  outline: none;
+}
+
+#add, #submit {
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  background: transparent;
+  color: white;
+  font-size: 22px;
+}
+
+#add:hover, #submit:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.uploaded-image{
+  width: 200px;
+  padding: 20px;
+  border-radius:30px;
+}
+.chat-box{
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 20px;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.message{
+  width: 90%;
+  padding: 20px 30px;
+  color: white;
+  border: 2px solid white;
+  border-radius: 20px;
+  font-size: 20px;
+}
+.pop-up{
+  position: absolute;
+  bottom: 150px;
+  left: 18%;
+  color: white;
+  border: 2px solid white;
+  border-radius: 20px;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.select-gen svg{
+  width: 25px;
+  height: 25px;
+  color: rgb(7, 236, 240);
+}
+
+.select-up svg{
+  width: 25px;
+  height: 25px;
+  color: rgb(7, 240, 11);
+}
+
+.select-up, .select-gen {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.select-up:hover, .select-gen:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+#img{
+  color: rgb(7, 236, 240);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .input-box input {
+    width: 70%;
+  }
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .category {
+    flex-direction: column; /* Stack buttons on small screens */
+  }
+
+  .upImage, .genImage, .chat {
+    width: 90%; /* Make buttons take more space */
+    text-align: center;
+  }
+
+  .icon {
+    font-size: 1.5rem; /* Adjust icon size */
+  }
+}
+
+@media (max-width: 480px) {
+  #tag {
+    font-size: 1.8rem; /* Reduce text size for smaller screens */
+    text-align: center;
+  }
+
+  .upImage, .genImage, .chat {
+    width: 100%; /* Full width on very small screens */
+  }
+
+  .icon {
+    font-size: 1.2rem; /* Reduce icon size */
+  }
+}
